@@ -1,0 +1,209 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Shrikhand;
+}
+
+
+.page_bloc{
+    width: $page-width;
+}
+
+.logo{
+    width: 50%;
+    display: block;
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1.2rem 20% 0.8rem 0px;
+    background-color: $page-1-bg;
+
+    
+}
+
+.img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.restaurant{
+    position: relative;
+    bottom: 3rem;
+
+    &__name{
+        display: flex;
+        flex-direction: row;
+        padding: $box-padding;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #F2F2F2;
+        border-radius: 2.5rem 2.5rem 0rem 0rem;
+
+
+        & > .fa-regular{
+            display: block;
+        }
+
+
+        & > h1{
+            font-family: shrikhand;
+            font-size: 28px;
+        }
+    }
+}
+
+
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    padding: $box-padding;
+    & > h2{
+    font-size: 18px;
+    font-weight: 400;
+    }
+    &__item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 11vh;
+        background-color: #fff;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 0.6rem;
+        border-radius: 1rem;
+        overflow: visible;
+        &__name{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: left;
+            & > h3{
+                font-size: 18px;
+                font-weight: 700;
+            }
+            & > h4{
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+        }
+
+        &__price{
+            font-weight: 700;
+            padding-top: 1.5rem;
+            position: relative;
+            left: 60px;
+
+        }
+
+    }
+
+    & > .order{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 25vh;
+        padding-top: 5vh;
+    }
+}
+
+
+.btn{
+    height: 8vh;
+    width: 190px;
+    font-size: 16px;
+    color: #fff;
+    transition: all 400ms ease-in-out;
+    &--bg{
+        background:  linear-gradient(lighten($secondary-color, 5) 10%, lighten($primary-color, 20) 100%);
+    }
+    &--radius{
+        border-radius: $btn-radius;
+    }
+    &--border{
+        border: none;
+    }
+    &--shadow{
+        box-shadow: $btn-shadow;
+    }
+    &:hover{
+        opacity: 0.5;
+        box-shadow: $btn-shadow;
+    }
+}
+
+.btn2{
+    border-radius: $btn2-radius;
+    color: $btn2-color;
+    background-color: $btn2-bg;
+    border: none;
+    height: 11vh;
+    width: 60px;
+    position: relative;
+    left: 80px;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    background-color: lighten(black, 20%);
+    padding: $box-padding;
+
+
+    & > h3{
+        font-family: Shrikhand;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+
+    & > .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 10px;
+        & > p{
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        & > .fa-solid{
+            display: block;
+            width: 15px;
+        }
+    }
+
+
+    & > p{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    & a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+}

@@ -1,0 +1,283 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Shrikhand;
+}
+
+
+.page_bloc{
+    width: $page-width;
+}
+
+
+
+/*==============================Début Page 1=============================*/
+/*------------------------------Header-----------------------*/
+
+.logo{
+    width: 40%;
+}
+
+.heading{
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    background-color: $page-1-bg;
+}
+
+
+
+    
+.location{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 60px;
+    align-items: center;
+    justify-content: center;
+
+    & .input{
+        padding-left: 10px;
+        background-color:darken($color-grey,5%);
+        border: none;
+        font-size: 16px;
+        font-weight: 900;
+    }   
+}
+
+.location--color{
+    background-color:darken($color-grey,5%);
+    /* Ajout box-shadow */
+}
+
+/*-----------------------------Main---------------------------------*/
+.invit{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+    & h1{
+        font-size: 24px;
+        font-weight: 900;
+        padding: 0px 50px 10px 50px;
+    }
+    & p{
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        padding: 0px 20px;
+    }
+    &__color{
+        background-color: $color-grey; 
+    }
+    & > .btn{
+        height: 9vh;
+        width: 220px;
+        font-size: 16px;
+        color: #fff;
+        transition: all 400ms ease-in-out;
+        &--bg{
+            background:  linear-gradient(lighten($secondary-color, 5) 10%, lighten($primary-color, 20) 100%);
+        }
+        &--radius{
+            border-radius: $btn-radius;
+        }
+        &--border{
+            border: none;
+        }
+        &--shadow{
+            box-shadow: $btn-shadow;
+        }
+        &:hover{
+            opacity: 0.5;
+            box-shadow: $btn-shadow;
+        }
+    }
+    
+}
+
+
+
+.function{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    padding: $box-padding;
+    position: relative;
+    & h2{
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    & .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        width: 95%;
+        height: 70px;
+        margin: 1rem;
+        & p{
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+        &--border{
+            border-radius: 20px;
+        }
+        &--shadow{
+            box-shadow: 5px 5px 5px darken($color-grey, 10);
+        }
+        &:nth-child(2){
+            background-color: lighten($color-grey,2);
+        }
+        &:nth-child(3){
+            background-color: lighten($color-grey,2);
+        }
+        &:nth-child(4){
+            background-color: lighten($primary-color, 35);
+        }
+        & .fa-stack{
+            display: block;
+            position: relative;
+            right: 1rem;
+
+        }
+        & > .fa-store{
+            color: $primary-color;
+        }
+    }
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    padding: $box-padding;
+    & h2{
+        font-size: 24px;
+        font-weight: 700;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+    &--border{
+        border-radius: 15px;
+    }
+    &--shadow{
+        box-shadow: $card-shadow;
+    }
+    &__img{
+        height: 175px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: $card-img-border;
+    }
+    &__label{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: $label-padding;
+        background-color: $label-bg-color;
+        border-radius: $card-label-border;
+        & .fa-regular{
+            color: black;
+            opacity: 1;
+        }
+    
+        & .fa-solid{
+                color: linear-gradient($primary-color -20px, $secondary-color 20px);
+                opacity: 0;
+        }
+    }
+    
+    & > .card__nom{
+        display: flex;
+        flex-direction: column;
+        & h3{
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        & p{
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+a:hover{
+    .fa-solid{
+        opacity: 1;
+    }
+    .fa-regular{
+        opacity: 0;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    background-color: lighten(black, 20%);
+    padding: $box-padding;
+
+
+    & > h3{
+        font-family: Shrikhand;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+
+    & > .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 10px;
+        & > p{
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        & > .fa-solid{
+            display: block;
+            width: 15px;
+        }
+    }
+
+
+    & > p{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    & a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+}
