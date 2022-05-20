@@ -94,8 +94,13 @@
         &__name{
             display: flex;
             flex-direction: column;
+            width: 700px; /*-----------------------*/
             justify-content: space-around;
             align-items: left;
+            border: 1px solid red;
+            transform-origin: 0% 50%; /*-------------------*/
+            transform: translateX(0); /*-------------------*/
+            transition: transform 1000ms ease-in-out; /*---------------------*/
             & > h3{
                 font-size: 18px;
                 font-weight: 700;
@@ -109,10 +114,11 @@
         &__price{
             font-weight: 700;
             padding-top: 1.5rem;
-            position: absolute;
-            left: 320px;
+            width: 100px; /*------------------*/
+            text-align: center;/*------------------------*/
             transform: translateX(0);
             transition: transform 1000ms ease-in-out;
+            border: 1px solid blue;
 
         }
 
@@ -152,6 +158,15 @@
     }
 }
 
+
+.buffer{ /*Ajout d'un box buffer*/
+    width: 50px;
+    border: 1px solid purple;
+    transform-origin: 100% 0%;
+    transition: transform 1000ms ease-in-out;
+}
+
+
 .btn2{
     border-radius: $btn2-radius;
     color: $btn2-color;
@@ -160,9 +175,10 @@
     height: 11vh;
     width: 60px;
     position: relative;
-    left: 80px;
+    left: 60px;
     transform: translateX(0);
     transition: transform 1000ms ease-in-out;
+    border: 1px solid black;
     & > .fa-stack{
         transform: rotate(0);
         transition: transform 1000ms ease-in-out;
@@ -173,13 +189,18 @@
     & > .btn2{
         transform: translateX(-70px);
     }
-    & > .menu__item__price{
+/*  & > .menu__item__price{
         transform: translateX(-50px);
     }
+      & > .menu__item__name{ 
+        transform: translateX(-50px);
+    } */
     & .fa-stack{
         transform: rotate(4turn);
     }
-
+    & > .buffer{
+        width: 200px;;
+    }
 }
 
 @keyframes rot{
