@@ -108,9 +108,9 @@
   height: 11vh;
   background-color: #fff;
   margin: 1rem 0rem 1rem 0rem;
-  padding: 0.6rem;
+  padding: 10px;
   border-radius: 1rem;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .menu__item__name {
@@ -141,8 +141,14 @@
 .menu__item__price {
   font-weight: 700;
   padding-top: 1.5rem;
-  position: relative;
-  left: 60px;
+  position: absolute;
+  left: 320px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
 .menu > .order {
@@ -199,6 +205,102 @@
   width: 60px;
   position: relative;
   left: 80px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+}
+
+.btn2 > .fa-stack {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+}
+
+.menu__item:hover > .btn2 {
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
+}
+
+.menu__item:hover > .menu__item__price {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
+.menu__item:hover .fa-stack {
+  -webkit-transform: rotate(4turn);
+          transform: rotate(4turn);
+}
+
+@-webkit-keyframes rot {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(4turn);
+            transform: rotate(4turn);
+  }
+}
+
+@keyframes rot {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(4turn);
+            transform: rotate(4turn);
+  }
+}
+
+@-webkit-keyframes btn_translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+}
+
+@keyframes btn_translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+}
+
+@-webkit-keyframes price_translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+}
+
+@keyframes price_translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
 }
 
 .footer {

@@ -4,6 +4,8 @@
 
 
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +17,7 @@
 .page_bloc{
     width: $page-width;
 }
+
 
 .logo{
     width: 50%;
@@ -85,7 +88,7 @@
         height: 11vh;
         background-color: #fff;
         margin: 1rem 0rem 1rem 0rem;
-        padding: 0.6rem;
+        padding: 10px;
         border-radius: 1rem;
         overflow: hidden;
         &__name{
@@ -101,14 +104,15 @@
                 font-size: 16px;
                 font-weight: 400;
             }
-
         }
 
         &__price{
             font-weight: 700;
             padding-top: 1.5rem;
-            position: relative;
-            left: 60px;
+            position: absolute;
+            left: 320px;
+            transform: translateX(0);
+            transition: transform 1000ms ease-in-out;
 
         }
 
@@ -157,20 +161,23 @@
     width: 60px;
     position: relative;
     left: 80px;
+    transform: translateX(0);
+    transition: transform 1000ms ease-in-out;
+    & > .fa-stack{
+        transform: rotate(0);
+        transition: transform 1000ms ease-in-out;
+    }
 }
 
 .menu__item:hover{
     & > .btn2{
         transform: translateX(-70px);
-        animation: btn_translate 1000ms ease-in-out;
     }
     & > .menu__item__price{
         transform: translateX(-50px);
-        animation: price_translate 1000ms ease-in-out;
     }
-    & .fa-check{
-        transform: rotate(2turn);
-        animation: rot 1000ms ease-in-out;
+    & .fa-stack{
+        transform: rotate(4turn);
     }
 
 }
