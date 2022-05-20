@@ -87,7 +87,7 @@
         margin: 1rem 0rem 1rem 0rem;
         padding: 0.6rem;
         border-radius: 1rem;
-        overflow: visible;
+        overflow: hidden;
         &__name{
             display: flex;
             flex-direction: column;
@@ -158,6 +158,50 @@
     position: relative;
     left: 80px;
 }
+
+.menu__item:hover{
+    & > .btn2{
+        transform: translateX(-70px);
+        animation: btn_translate 1000ms ease-in-out;
+    }
+    & > .menu__item__price{
+        transform: translateX(-50px);
+        animation: price_translate 1000ms ease-in-out;
+    }
+    & .fa-check{
+        transform: rotate(2turn);
+        animation: rot 1000ms ease-in-out;
+    }
+
+}
+
+@keyframes rot{
+    0% {
+        transform:  rotate(0);
+    }
+    100%{
+        transform:  rotate(4turn);
+    }
+}
+
+@keyframes btn_translate{
+    0% {
+        transform:  translateX(0);
+    }
+    100%{
+        transform:  translateX(-70px);
+    }
+}
+
+@keyframes price_translate{
+    0% {
+        transform:  translateX(0);
+    }
+    100%{
+        transform:  translateX(-50px);
+    }
+}
+
 
 
 .footer{
