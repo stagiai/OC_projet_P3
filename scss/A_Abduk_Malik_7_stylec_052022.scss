@@ -70,6 +70,8 @@
     }
 }
 
+/*------faire apparaitre progressivement les menus------*/
+
 
 
 
@@ -79,15 +81,18 @@
     background-color: #F2F2F2;
     padding: $box-padding;
     width: 100%;
- 
+
+
     & > h2{
     font-size: 18px;
     font-weight: 400;
+
     }
 
     & > p{
         border:green;
         color: #F2F2F2;
+
     }
     & .container{
         display: flex;        
@@ -99,64 +104,68 @@
         border-radius: 1rem;
         overflow: hidden;
         cursor: pointer;
-    .item{
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        width: 150%;
-        &__name{
+
+    
+        .item{
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 300px;
-            align-items: left;
-            transform-origin: 100% 50%;
-            transition: width 1000ms ease-in-out;
-            flex: 0 1 auto;
-            & > h3{
-                font-size: 18px;
-                font-weight: 700;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            width: 150%;
+
+            &__name{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 300px;
+                align-items: left;
+                transform-origin: 100% 50%;
+                transition: width 1000ms ease-in-out;
+                flex: 0 1 auto;
+
+                & > h3{
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+
+                }
+                & > h4{
+                    font-size: 15px;
+                    font-weight: 400;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+
+                }
             }
-            & > h4{
+
+            &__price{
                 font-size: 15px;
-                font-weight: 400;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+                font-weight: 700;
+                padding-top: 1.5rem;
+                width: 100px;
             }
-        }
 
-        &__price{
-            font-size: 15px;
-            font-weight: 700;
-            padding-top: 1.5rem;
-            width: 100px;
-        }
-
-        & .btn2{
-            border-radius: $btn2-radius;
-            color: $btn2-color;
-            background-color: $btn2-bg;
-            border: none;
-            height: 11vh;
-            width: 60px;
-            transform-origin: 100% 50%;
-            transform: translateX(0);
-            transition: transform 1000ms 200ms ease-in-out;
-            & > .fa-stack{
-                transform: rotate(0);
-                transition: transform 1000ms 400ms ease-in-out;
+            & .btn2{
+                border-radius: $btn2-radius;
+                color: $btn2-color;
+                background-color: $btn2-bg;
+                border: none;
+                height: 11vh;
+                width: 60px;
+                transform-origin: 100% 50%;
+                transform: translateX(0);
+                transition: transform 1000ms 200ms ease-in-out;
+                & > .fa-stack{
+                    transform: rotate(0);
+                    transition: transform 1000ms 400ms ease-in-out;
+                }
             }
-        }
+        }     
     }
 
-        
-
-    }
 
     & > .order{
         display: flex;
@@ -167,6 +176,14 @@
     }
 }
 
+@keyframes fadein{
+    from {
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
 
 .btn{
     height: 50px;
@@ -206,33 +223,6 @@
         }
     }
     
-}
-
-@keyframes rot{
-    0% {
-        transform:  rotate(0);
-    }
-    100%{
-        transform:  rotate(4turn);
-    }
-}
-
-@keyframes btn_translate{
-    0% {
-        transform:  translateX(0);
-    }
-    100%{
-        transform:  translateX(-70px);
-    }
-}
-
-@keyframes price_translate{
-    0% {
-        transform:  translateX(0);
-    }
-    100%{
-        transform:  translateX(-50px);
-    }
 }
 
 

@@ -1,0 +1,388 @@
+@charset "UTF-8";
+/*largeur de l'écran*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto, Shrikhand;
+}
+
+.page_bloc {
+  width: 375px;
+}
+
+.logo {
+  width: 50%;
+  display: block;
+}
+
+.heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  padding: 1.2rem 20% 0.8rem 0px;
+  background-color: #FFFF;
+}
+
+.img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.restaurant {
+  position: relative;
+  bottom: 3rem;
+  width: 100%;
+}
+
+.restaurant__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F2F2F2;
+  border-radius: 2.5rem 2.5rem 0rem 0rem;
+}
+
+.restaurant__name > .fa-regular {
+  display: block;
+}
+
+.restaurant__name > h1 {
+  font-family: shrikhand;
+  font-size: 28px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F2F2F2;
+  padding: 10px;
+  width: 100%;
+}
+
+.menu > h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.menu > p {
+  border: green;
+  color: #F2F2F2;
+}
+
+.menu .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 68px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 5px 0px 5px 10px;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu .container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150%;
+}
+
+.menu .container .item__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 300px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transition: width 1000ms ease-in-out;
+  transition: width 1000ms ease-in-out;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.menu .container .item__name > h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu .container .item__name > h4 {
+  font-size: 15px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu .container .item__price {
+  font-size: 15px;
+  font-weight: 700;
+  padding-top: 1.5rem;
+  width: 100px;
+}
+
+.menu .container .item .btn2 {
+  border-radius: 0rem 1rem 1rem 0rem;
+  color: #7eeacf;
+  background-color: #7eeacf;
+  border: none;
+  height: 11vh;
+  width: 60px;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 1000ms 200ms ease-in-out;
+  transition: -webkit-transform 1000ms 200ms ease-in-out;
+  transition: transform 1000ms 200ms ease-in-out;
+  transition: transform 1000ms 200ms ease-in-out, -webkit-transform 1000ms 200ms ease-in-out;
+}
+
+.menu .container .item .btn2 > .fa-stack {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: -webkit-transform 1000ms 400ms ease-in-out;
+  transition: -webkit-transform 1000ms 400ms ease-in-out;
+  transition: transform 1000ms 400ms ease-in-out;
+  transition: transform 1000ms 400ms ease-in-out, -webkit-transform 1000ms 400ms ease-in-out;
+}
+
+.menu > .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 25vh;
+  padding-top: 5vh;
+}
+
+.btn {
+  height: 50px;
+  width: 190px;
+  font-size: 16px;
+  color: #fff;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.btn--bg {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff93e1), to(#c9abee));
+  background: linear-gradient(#ff93e1 10%, #c9abee 100%);
+}
+
+.btn--radius {
+  border-radius: 2rem;
+}
+
+.btn--border {
+  border: none;
+}
+
+.btn--shadow {
+  -webkit-box-shadow: #9356DC 5px 5px 3px;
+          box-shadow: #9356DC 5px 5px 3px;
+}
+
+.btn:hover {
+  opacity: 0.5;
+  -webkit-box-shadow: #9356DC 5px 5px 3px;
+          box-shadow: #9356DC 5px 5px 3px;
+}
+
+.container:hover > .item .item__name {
+  width: 230px;
+}
+
+.container:hover > .item .btn2 {
+  -webkit-transform: translateX(-45px);
+          transform: translateX(-45px);
+}
+
+.container:hover > .item .btn2 .fa-stack {
+  -webkit-transform: rotate(2turn);
+          transform: rotate(2turn);
+}
+
+@-webkit-keyframes rot {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(4turn);
+            transform: rotate(4turn);
+  }
+}
+
+@keyframes rot {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(4turn);
+            transform: rotate(4turn);
+  }
+}
+
+@-webkit-keyframes btn_translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+}
+
+@keyframes btn_translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+}
+
+@-webkit-keyframes price_translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+}
+
+@keyframes price_translate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  color: white;
+  background-color: #333333;
+  padding: 10px;
+}
+
+.footer > h3 {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.footer > .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
+}
+
+.footer > .content > p {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.footer > .content > .fa-solid {
+  display: block;
+  width: 15px;
+}
+
+.footer > p {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+/*# sourceMappingURL=A_Abduk_Malik_7_stylec_052022.css.map */
