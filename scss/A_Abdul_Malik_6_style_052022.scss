@@ -111,7 +111,7 @@
 .function{
     display: flex;
     flex-direction: column;
-    align-items: right;
+    justify-content: right;
     padding: $box-padding;
     position: relative;
     & h2{

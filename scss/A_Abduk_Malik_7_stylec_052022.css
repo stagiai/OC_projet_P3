@@ -77,6 +77,7 @@
   font-size: 28px;
 }
 
+/*------faire apparaitre progressivement les menus------*/
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,9 +146,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 300px;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
   -webkit-transition: width 1000ms ease-in-out;
@@ -218,6 +216,24 @@
   padding-top: 5vh;
 }
 
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .btn {
   height: 50px;
   width: 190px;
@@ -263,72 +279,6 @@
 .container:hover > .item .btn2 .fa-stack {
   -webkit-transform: rotate(2turn);
           transform: rotate(2turn);
-}
-
-@-webkit-keyframes rot {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(4turn);
-            transform: rotate(4turn);
-  }
-}
-
-@keyframes rot {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(4turn);
-            transform: rotate(4turn);
-  }
-}
-
-@-webkit-keyframes btn_translate {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-70px);
-            transform: translateX(-70px);
-  }
-}
-
-@keyframes btn_translate {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-70px);
-            transform: translateX(-70px);
-  }
-}
-
-@-webkit-keyframes price_translate {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-}
-
-@keyframes price_translate {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
 }
 
 .footer {
