@@ -275,9 +275,8 @@
 }
 
 .card__label .fa-solid {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC 0%, #FF79DA 100%);
-  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff93e1), to(#c9abee));
+  background: linear-gradient(#ff93e1 10%, #c9abee 100%);
 }
 
 .card > .card__nom {

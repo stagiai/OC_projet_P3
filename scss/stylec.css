@@ -89,16 +89,42 @@
   background-color: #F2F2F2;
   padding: 10px;
   width: 100%;
+  opacity: 0;
+  -webkit-animation: fadein 7s;
+          animation: fadein 7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-.menu > h2 {
-  font-size: 18px;
-  font-weight: 400;
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.menu > p {
-  border: green;
-  color: #F2F2F2;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menu h2 {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px;
+}
+
+.menu .line {
+  width: 40px;
+  height: 10px;
+  border-bottom: 3px solid #7eeacf;
 }
 
 .menu .container {
@@ -214,15 +240,6 @@
   width: 100%;
   height: 25vh;
   padding-top: 5vh;
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fadein {

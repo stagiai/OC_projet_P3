@@ -12,9 +12,8 @@
 
 .page_bloc{
     width: $page-width;
-}
-
-
+}   
+      
 
 /*==============================Début Page 1=============================*/
 /*------------------------------Header-----------------------*/
@@ -202,11 +201,10 @@
         }
     
         & .fa-solid{
-                background: linear-gradient($primary-color 0%, $secondary-color 100%);
-                opacity: 1;
+            background:  linear-gradient(lighten($secondary-color, 5) 10%, lighten($primary-color, 20) 100%);
         }
-    }
-    
+
+    }    
     & > .card__nom{
         display: flex;
         flex-direction: column;
