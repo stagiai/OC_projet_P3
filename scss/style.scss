@@ -40,6 +40,7 @@
     padding-left: 60px;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 0px 1px 5px rgb(91, 91, 91);
 
     & .input{
         padding-left: 10px;
@@ -52,7 +53,6 @@
 
 .location--color{
     background-color:darken($color-grey,5%);
-    /* Ajout box-shadow */
 }
 
 /*-----------------------------Main---------------------------------*/
