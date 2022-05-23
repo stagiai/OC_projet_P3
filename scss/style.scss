@@ -175,17 +175,36 @@
     flex-direction: column;
     margin-bottom: 20px;
     width: 100%;
+    position: relative;
     &--border{
         border-radius: 15px;
     }
     &--shadow{
         box-shadow: $card-shadow;
     }
+    & .late-news{
+        width: 80px;
+        height: 30px;
+        background-color: lighten($tertiary-color,10);
+        padding-top: 5px;
+        padding-left: 10px;
+        align-items: center;
+        z-index: 1;
+        position:absolute;
+        left: 240px;
+        top: 20px;
+        & p{
+            color: darken($tertiary-color,40);
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
     &__img{
         height: 175px;
         object-fit: cover;
         object-position: 50% 50%;
         border-radius: $card-img-border;
+        z-index:0;
     }
     &__label{
         display: flex;
