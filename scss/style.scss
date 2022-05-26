@@ -216,11 +216,10 @@
         border-radius: $card-label-border;
         & .fa-regular{
             color: black;
-            opacity: 0;
         }
     
         & .fa-solid{
-            background:  linear-gradient(lighten($secondary-color, 5) 10%, lighten($primary-color, 20) 100%);
+            color: white;
         }
 
     }    
@@ -240,12 +239,19 @@
     }
 }
 
-a:hover{
+a:hover > .fa-stack{
+    .fa-regular{
+        opacity: 0;
+    }
     .fa-solid{
         opacity: 1;
     }
-    .fa-regular{
-        opacity: 0;
+    .fa{
+        display: block;
+        -webkit-text-fill-color: transparent;
+        background: -webkit-linear-gradient($primary-color, $secondary-color);
+        background-clip: border-box;
+        -webkit-background-clip: text;
     }
 }
 
