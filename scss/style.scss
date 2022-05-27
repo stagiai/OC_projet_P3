@@ -10,10 +10,10 @@
 }
 
 
-.page_bloc{
+/*.page_bloc{
     width: $page-width;
-}   
-      
+}  */
+     
 
 /*==============================Début Page 1=============================*/
 /*------------------------------Header-----------------------*/
@@ -117,42 +117,46 @@
         margin-bottom: 1rem;
     }
 
-    & .box{
+    &__responsive{
         display: flex;
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        width: 95%;
-        height: 70px;
-        margin: 1rem;
-        & p{
-            font-size: 16px;
-            font-weight: 600;
-            margin-left: 1rem;
-        }
-        &--border{
-            border-radius: 20px;
-        }
-        &--shadow{
-            box-shadow: 5px 5px 5px darken($color-grey, 10);
-        }
-        &:nth-child(2){
-            background-color: lighten($color-grey,2);
-        }
-        &:nth-child(3){
-            background-color: lighten($color-grey,2);
-        }
-        &:nth-child(4){
-            background-color: lighten($primary-color, 35);
-        }
-        & .fa-stack{
-            display: block;
-            position: relative;
-            right: 1rem;
+        flex-direction: column;   
+        & > .box{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            width: 350px;
+            height: 70px;
+            margin: 1rem;
+            & p{
+                font-size: 16px;
+                font-weight: 600;
+                margin-left: 1rem;
+            }
+            &--border{
+                border-radius: 20px;
+            }
+            &--shadow{
+                box-shadow: 5px 5px 5px darken($color-grey, 10);
+            }
+            &:nth-child(2){
+                background-color: lighten($color-grey,2);
+            }
+            &:nth-child(3){
+                background-color: lighten($color-grey,2);
+            }
+            &:nth-child(4){
+                background-color: lighten($primary-color, 35);
+            }
+            & .fa-stack{
+                display: block;
+                position: relative;
+                right: 1rem;
 
-        }
-        & > .fa-store{
-            color: $primary-color;
+            }
+            & > .fa-store{
+                color: $primary-color;
+            }
         }
     }
 }
@@ -168,6 +172,10 @@
         font-weight: 700;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
+    }
+    &__responsive{
+        display: flex;
+        flex-direction: column;
     }
 }
 .card{
@@ -270,35 +278,66 @@ a:hover > .fa-stack{
         font-weight: 400;
         margin-bottom: 20px;
     }
-
-
-    & > .content{
+    &__responsive{
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-bottom: 10px;
+        flex-direction: column;
+        & > .content{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 10px;
+            & p{
+                font-size: 15px;
+                margin-left: 10px;
+            }
+    
+            & > .fa-solid{
+                display: block;
+                width: 15px;
+            }
+        }
+    
         & > p{
             font-size: 15px;
-            margin-left: 10px;
+            padding-bottom: 10px;
         }
-
-        & > .fa-solid{
-            display: block;
-            width: 15px;
+    
+        & > a{
+            color: white;
+            text-decoration: none;
         }
     }
 
 
-    & > p{
-        font-size: 15px;
-        padding-bottom: 10px;
+}
+
+
+
+@media screen and (min-width : 765px){
+    .cards__responsive {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
     }
 
-
-    & a{
-        color: white;
-        text-decoration: none;
+    .logo{
+        width: 30%;
     }
 
+    .function__responsive {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
+    .footer__responsive{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 95%;
+        justify-content: space-between;
+
+    }
+    
 }
