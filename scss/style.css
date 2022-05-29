@@ -25,8 +25,8 @@
   position: absolute;
   top: 48vh;
   left: 48%;
-  -webkit-transform: rotate 0;
-          transform: rotate 0;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
   -webkit-animation: 3s linear forwards rotate;
           animation: 3s linear forwards rotate;
 }
@@ -252,8 +252,7 @@
 }
 
 .invit > .btn--bg {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff93e1), to(#c9abee));
-  background: linear-gradient(#ff93e1 10%, #c9abee 100%);
+  background: -webkit-linear-gradient(#ff93e1 10%, #c9abee 100%);
 }
 
 .invit > .btn--radius {
@@ -400,7 +399,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 20px;
-  /*width: 355px;*/
   width: auto;
   position: relative;
 }

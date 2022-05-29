@@ -11,11 +11,6 @@
 }
 
 
-/*.page_bloc{
-    width: $page-width;
-}*/
-
-
 .logo{
     width: 50%;
     display: block;
@@ -66,11 +61,6 @@
         }
     }
 }
-
-/*------faire apparaitre progressivement les menus------*/
-
-
-
 
 .menu{
     display: flex;
@@ -196,7 +186,7 @@
     color: #fff;
     transition: all 400ms ease-in-out;
     &--bg{
-        background:  linear-gradient(lighten($secondary-color, 5) 10%, lighten($primary-color, 20) 100%);
+        background:  -webkit-linear-gradient(lighten($secondary-color, 5) 10%, lighten($primary-color, 20) 100%);
     }
     &--radius{
         border-radius: $btn-radius;

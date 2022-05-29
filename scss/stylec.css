@@ -8,9 +8,6 @@
   font-family: Roboto, Shrikhand;
 }
 
-/*.page_bloc{
-    width: $page-width;
-}*/
 .logo {
   width: 50%;
   display: block;
@@ -76,7 +73,6 @@
   font-size: 28px;
 }
 
-/*------faire apparaitre progressivement les menus------*/
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,8 +258,7 @@
 }
 
 .btn--bg {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff93e1), to(#c9abee));
-  background: linear-gradient(#ff93e1 10%, #c9abee 100%);
+  background: -webkit-linear-gradient(#ff93e1 10%, #c9abee 100%);
 }
 
 .btn--radius {
