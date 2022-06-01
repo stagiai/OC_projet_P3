@@ -574,8 +574,24 @@ a:hover > .fa-stack .fa {
 }
 
 @media screen and (min-width: 450px) {
-  .card {
+  .cards {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards h2 {
+    margin-right: 260px;
+  }
+  .cards .card {
     width: 400px;
+  }
+  .function {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .function h2 {
+    margin-right: 230px;
   }
   .function .box {
     width: 380px;
@@ -589,33 +605,8 @@ a:hover > .fa-stack .fa {
 }
 
 @media screen and (min-width: 765px) {
-  .cards__responsive {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .card {
-    margin-right: 10px;
-  }
   .logo {
     width: 30%;
-  }
-  .function__responsive {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .footer__responsive {
     display: -webkit-box;
@@ -631,6 +622,45 @@ a:hover > .fa-stack .fa {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 844px) {
+  .function {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .function__responsive {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .function h2 {
+    margin-right: 0px;
+  }
+  .cards__responsive {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .cards h2 {
+    margin-right: 0px;
+  }
+  .cards .card {
+    margin-right: 10px;
   }
 }
 

@@ -227,19 +227,16 @@
     color: white;
     background-color: lighten(black, 20%);
     padding: $box-padding;
+    & > h3{
+        font-family: Shrikhand;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
 
     &__responsive{
         display: flex;
-        flex-direction: column;
-    
-
-        & > h3{
-            font-family: Shrikhand;
-            font-size: 18px;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
+        flex-direction: column;  
 
         & > .content{
             display: flex;
@@ -268,17 +265,14 @@
         }
     }
 }
-
+@media screen and (min-width : 375px){
+    .menu{
+        align-items: center;
+    }
+}
 
 @media screen and (min-width : 500px){
-    .menu__responsive {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        & > .container{
-            margin-right: 20px;
-        }
-    }
+
     .logo{
         width: 45%;
     }
@@ -294,6 +288,8 @@
     
 }
 
+
+
 @media screen and (min-width : 765px){
     .logo{
         width: 40%;
@@ -303,5 +299,18 @@
 @media screen and (min-width : 990px){
     .logo{
         width: 35%;
+    }
+}
+
+@media screen and (min-width : 1130px){
+    .menu{ 
+        &__responsive {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            & > .container{
+                margin-right: 20px;
+            }
+        }
     }
 }
