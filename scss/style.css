@@ -9,8 +9,11 @@
 }
 
 .spin_page {
+  position: absolute;
+  /* rafraichissement de la page avec load spinner réglé */
   width: 100%;
-  height: 100vh;
+  height: 300vh;
+  /*  test 300vh au lieu de 100*/
   background-color: black;
   -webkit-animation: 3s linear forwards collapse;
           animation: 3s linear forwards collapse;
@@ -134,6 +137,7 @@
 }
 
 .page_bloc {
+  position: absolute;
   -webkit-animation: 3.2s linear forwards fadein;
           animation: 3.2s linear forwards fadein;
 }
@@ -196,16 +200,16 @@
           box-shadow: inset 0px 1px 5px #5b5b5b;
 }
 
-.location .input {
+.location--color {
+  background-color: #e9e9e9;
+}
+
+.input {
   padding-left: 10px;
   background-color: #e9e9e9;
   border: none;
   font-size: 16px;
   font-weight: 900;
-}
-
-.location--color {
-  background-color: #e9e9e9;
 }
 
 /*-----------------------------Main---------------------------------*/
@@ -242,7 +246,7 @@
   background-color: #f6f6f6;
 }
 
-.invit > .btn {
+.btn {
   height: 50px;
   width: 220px;
   font-size: 16px;
@@ -251,24 +255,24 @@
   transition: all 400ms ease-in-out;
 }
 
-.invit > .btn--bg {
+.btn--bg {
   background: -webkit-linear-gradient(#ff93e1 10%, #c9abee 100%);
 }
 
-.invit > .btn--radius {
+.btn--radius {
   border-radius: 2rem;
 }
 
-.invit > .btn--border {
+.btn--border {
   border: none;
 }
 
-.invit > .btn--shadow {
+.btn--shadow {
   -webkit-box-shadow: #9356DC 5px 5px 3px;
           box-shadow: #9356DC 5px 5px 3px;
 }
 
-.invit > .btn:hover {
+.btn:hover {
   opacity: 0.5;
   -webkit-box-shadow: #9356DC 5px 5px 3px;
           box-shadow: #9356DC 5px 5px 3px;
@@ -361,6 +365,14 @@
   color: #9356DC;
 }
 
+.function__responsive > .box > .fa-mobile-screen-button {
+  color: #9356DC;
+}
+
+.function__responsive > .box > .fa-list {
+  color: #9356DC;
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,6 +402,17 @@
           flex-direction: column;
 }
 
+.late-news {
+  width: 80px;
+  height: 30px;
+  background-color: #aaf1df;
+  padding-top: 5px;
+  padding-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,6 +424,7 @@
   margin-bottom: 20px;
   width: auto;
   position: relative;
+  text-decoration: none;
 }
 
 .card--border {
@@ -412,22 +436,14 @@
           box-shadow: #999999 5px 5px 8px;
 }
 
-.card .late-news {
-  width: 80px;
-  height: 30px;
-  background-color: #aaf1df;
-  padding-top: 5px;
-  padding-left: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.card__late-news {
   z-index: 1;
   position: absolute;
-  left: 240px;
+  right: 20px;
   top: 20px;
 }
 
-.card .late-news p {
+.card__late-news p {
   color: #16866a;
   font-size: 14px;
   font-weight: 600;
@@ -462,15 +478,7 @@
   border-radius: 0rem 0rem 1rem 1rem;
 }
 
-.card__label .fa-regular {
-  color: black;
-}
-
-.card__label .fa-solid {
-  color: white;
-}
-
-.card > .card__nom {
+.card__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,27 +488,42 @@
           flex-direction: column;
 }
 
-.card > .card__nom h3 {
-  font-size: 24px;
-  font-weight: 900;
-  margin-bottom: 20px;
+.card__name h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: black;
 }
 
-.card > .card__nom p {
-  font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 20px;
+.card__name p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: black;
 }
 
-a:hover > .fa-stack .fa-regular {
-  opacity: 0;
-}
-
-a:hover > .fa-stack .fa-solid {
+.card .fa-regular {
+  color: black;
   opacity: 1;
 }
 
-a:hover > .fa-stack .fa {
+.card .fa-solid {
+  opacity: 0;
+}
+
+.fa-stack:hover .fa-regular {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.fa-stack:hover .fa-solid {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.fa-stack:hover .fa {
   display: block;
   -webkit-text-fill-color: transparent;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);

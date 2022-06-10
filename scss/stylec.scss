@@ -68,7 +68,7 @@
     padding: $box-padding;
     width: 100%;
     opacity: 0;
-    animation: fadein 2s;
+    animation: fadein 400ms;
     animation-fill-mode: forwards;
     
     & h2{
@@ -86,63 +86,112 @@
     &__responsive{
         display: flex;
         flex-direction: column;
-        & .container{
-            display: flex;        
-            height: 68px;
-            width: 350px;
-            align-items: center;
-            background-color: #fff;
+        & > .container{
             margin: 1rem 0rem 1rem 0rem;
-            padding: 5px 0px 5px 10px;
-            border-radius: 1rem;
+        } 
+    }
+}
+
+.container{
+    display: flex;        
+    height: 68px;
+    width: 350px;
+    align-items: center;
+    background-color: #fff;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 5px 0px 5px 10px;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+/*  opacity: 0;
+    animation: fadein 30s; ----test-----
+    animation-fill-mode: forwards; */
+    & > .item{
+        width: 150%;
+    }      
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    &__name{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        transform-origin: 100% 50%;
+        transition: width 1000ms ease-in-out;
+        flex: 0 1 auto;
+        & > h3{
+            font-size: 18px;
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             overflow: hidden;
-            cursor: pointer;
-
-        
-            .item{
-                display: flex;
-                flex-direction: row;
-                justify-content: left;
-                align-items: center;
-                width: 150%;
-
-                &__name{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    width: 300px;
-                    transform-origin: 100% 50%;
-                    transition: width 1000ms ease-in-out;
-                    flex: 0 1 auto;
-
-                    & > h3{
-                        font-size: 18px;
-                        font-weight: 700;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-
-                    }
-                    & > h4{
-                        font-size: 15px;
-                        font-weight: 400;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-
-                    }
-                }
-
-                &__price{
-                    font-size: 15px;
-                    font-weight: 700;
-                    padding-top: 1.5rem;
-                    width: 100px;
-                }                
-            }     
         }
-    }   
-    
+        & > h4{
+            font-size: 15px;
+            font-weight: 400;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    &__price{
+        font-size: 15px;
+        font-weight: 700;
+        padding-top: 1.5rem;
+        width: 100px;
+    }                
+}
+
+.container-1:nth-child(1){
+    opacity: 0; /* test */
+    animation: fadein 3s; /* test */
+    animation-fill-mode: forwards; /* test */
+}
+.container-1:nth-child(2){
+    opacity: 0; /* test */
+    animation: fadein 3s 1s; /* test */
+    animation-fill-mode: forwards; /* test */
+}
+.container-1:nth-child(3){
+    opacity: 0; /* test */
+    animation: fadein 3s 2s; /* test */
+    animation-fill-mode: forwards; /* test */
+}
+
+.container-2:nth-child(1){
+    opacity: 0; /* test */
+    animation: fadein 3s 3s; /* test */
+    animation-fill-mode: forwards; /* test */
+}
+.container-2:nth-child(2){
+    opacity: 0; /* test */
+    animation: fadein 3s 4s; /* test */
+    animation-fill-mode: forwards; /* test */
+}
+.container-2:nth-child(3){
+    opacity: 0; /* test */
+    animation: fadein 3s 5s; /* test */
+    animation-fill-mode: forwards; /* test */
+}
+.container-3:nth-child(1){
+    opacity: 0; /* test */
+    animation: fadein 3s 6s; /* test */
+    animation-fill-mode: forwards; /* test */
+}
+.container-3:nth-child(2){
+    opacity: 0; /* test */
+    animation: fadein 3s 7s; /* test */
+    animation-fill-mode: forwards; /* test */
+}
+.container-3:nth-child(3){
+    opacity: 0; /* test */
+    animation: fadein 3s 8s; /* test */
+    animation-fill-mode: forwards; /* test */
 }
 
 @keyframes fadein{

@@ -9,8 +9,9 @@
 }
 
 .spin_page{
+    position: absolute; /* rafraichissement de la page avec load spinner réglé */
     width: 100%;
-    height: 100vh;
+    height: 300vh; /*  test 300vh au lieu de 100*/
     background-color: black;
     animation: 3s linear forwards collapse;
     & > .spin_item{
@@ -80,6 +81,7 @@
   }
 
 .page_bloc{
+    position: absolute;
     animation: 3.2s linear forwards fadein;
 }
 
@@ -107,9 +109,6 @@
     padding: 20px 0px 0px 0px;
     background-color: $page-1-bg;
 }
-
-
-
     
 .location{
     display: flex;
@@ -121,19 +120,18 @@
     align-items: center;
     justify-content: center;
     box-shadow: inset 0px 1px 5px rgb(91, 91, 91);
-
-    & .input{
-        padding-left: 10px;
+    &--color{
         background-color:darken($color-grey,5%);
-        border: none;
-        font-size: 16px;
-        font-weight: 900;
-    }   
+    }
 }
 
-.location--color{
+.input{
+    padding-left: 10px;
     background-color:darken($color-grey,5%);
-}
+    border: none;
+    font-size: 16px;
+    font-weight: 900;
+}   
 
 /*-----------------------------Main---------------------------------*/
 .invit{
@@ -156,34 +154,32 @@
     }
     &__color{
         background-color: $color-grey; 
-    }
-    & > .btn{
-        height: 50px;
-        width: 220px;
-        font-size: 16px;
-        color: #fff;
-        transition: all 400ms ease-in-out;
-        &--bg{
-            background:  -webkit-linear-gradient(lighten($secondary-color, 5) 10%, lighten($primary-color, 20) 100%);
-        }
-        &--radius{
-            border-radius: $btn-radius;
-        }
-        &--border{
-            border: none;
-        }
-        &--shadow{
-            box-shadow: $btn-shadow;
-        }
-        &:hover{
-            opacity: 0.5;
-            box-shadow: $btn-shadow;
-        }
-    }
-    
+    }   
 }
 
-
+.btn{
+    height: 50px;
+    width: 220px;
+    font-size: 16px;
+    color: #fff;
+    transition: all 400ms ease-in-out;
+    &--bg{
+        background:  -webkit-linear-gradient(lighten($secondary-color, 5) 10%, lighten($primary-color, 20) 100%);
+    }
+    &--radius{
+        border-radius: $btn-radius;
+    }
+    &--border{
+        border: none;
+    }
+    &--shadow{
+        box-shadow: $btn-shadow;
+    }
+    &:hover{
+        opacity: 0.5;
+        box-shadow: $btn-shadow;
+    }
+}
 
 .function{
     display: flex;
@@ -237,6 +233,14 @@
             & > .fa-store{
                 color: $primary-color;
             }
+            & > .fa-mobile-screen-button{
+                color: $primary-color;
+            }
+            & > .fa-list{
+                color: $primary-color;
+            }
+
+
         }
     }
 }
@@ -258,28 +262,32 @@
         flex-direction: column;
     }
 }
+
+.late-news{
+    width: 80px;
+    height: 30px;
+    background-color: lighten($tertiary-color,10);
+    padding-top: 5px;
+    padding-left: 10px;
+    align-items: center;
+}
 .card{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     width: auto;
     position: relative;
+    text-decoration: none;
     &--border{
         border-radius: 15px;
     }
     &--shadow{
         box-shadow: $card-shadow;
     }
-    & .late-news{
-        width: 80px;
-        height: 30px;
-        background-color: lighten($tertiary-color,10);
-        padding-top: 5px;
-        padding-left: 10px;
-        align-items: center;
+    &__late-news{
         z-index: 1;
         position: absolute;
-        left: 240px;
+        right: 20px;
         top: 20px;
         & p{
             color: darken($tertiary-color,40);
@@ -302,37 +310,45 @@
         padding: $label-padding;
         background-color: $label-bg-color;
         border-radius: $card-label-border;
-        & .fa-regular{
-            color: black;
-        }
-    
-        & .fa-solid{
-            color: white;
-        }
 
     }    
-    & > .card__nom{
+    &__name{
         display: flex;
         flex-direction: column;
         & h3{
-            font-size: 24px;
-            font-weight: 900;
-            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: black;
         }
         & p{
-            font-size: 20px;
-            font-weight: 900;
-            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 5px;
+            color: black;
         }
     }
+    & .fa-regular{
+        color: black;
+        opacity: 1;
+    }
+    & .fa-solid{
+        opacity: 0;
+    }    
 }
 
-a:hover > .fa-stack{
+
+
+
+
+.fa-stack:hover{
     .fa-regular{
         opacity: 0;
+        transition: opacity 1s;
     }
     .fa-solid{
         opacity: 1;
+        transition: opacity 1s
     }
     .fa{
         display: block;
@@ -387,8 +403,6 @@ a:hover > .fa-stack{
             text-decoration: none;
         }
     }
-
-
 }
 
 @media screen and (min-width : 450px){
