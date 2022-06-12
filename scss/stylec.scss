@@ -125,9 +125,6 @@
     border-radius: 1rem;
     overflow: hidden;
     cursor: pointer;
-/*  opacity: 0;
-    animation: fadein 30s; ----test-----
-    animation-fill-mode: forwards; */
     & > .item{
         width: 150%;
     }      
@@ -170,50 +167,50 @@
 }
 
 .container-1:nth-child(1){
-    opacity: 0; /* test */
-    animation: fadein 0.5s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s;
+    animation-fill-mode: forwards;
 }
 .container-1:nth-child(2){
-    opacity: 0; /* test */
-    animation: fadein 0.5s 0.2s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s 0.2s;
+    animation-fill-mode: forwards;
 }
 .container-1:nth-child(3){
-    opacity: 0; /* test */
-    animation: fadein 0.5s 0.4s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s 0.4s;
+    animation-fill-mode: forwards;
 }
 
 .container-2:nth-child(1){
-    opacity: 0; /* test */
-    animation: fadein 0.5s 0.6s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s 0.6s;
+    animation-fill-mode: forwards;
 }
 .container-2:nth-child(2){
-    opacity: 0; /* test */
-    animation: fadein 0.5s 0.8s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s 0.8s;
+    animation-fill-mode: forwards;
 }
 .container-2:nth-child(3){
-    opacity: 0; /* test */
-    animation: fadein 0.5s 1s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s 1s;
+    animation-fill-mode: forwards;
 }
 .container-3:nth-child(1){
-    opacity: 0; /* test */
-    animation: fadein 0.5s 1.2s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s 1.2s;
+    animation-fill-mode: forwards;
 }
 .container-3:nth-child(2){
-    opacity: 0; /* test */
-    animation: fadein 0.5s 1.4s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s 1.4s;
+    animation-fill-mode: forwards;
 }
 .container-3:nth-child(3){
-    opacity: 0; /* test */
-    animation: fadein 0.5s 1.6s; /* test */
-    animation-fill-mode: forwards; /* test */
+    opacity: 0;
+    animation: fadein 0.5s 1.6s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fadein{
