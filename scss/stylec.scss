@@ -49,15 +49,37 @@
         background-color: #F2F2F2;
         border-radius: 2.5rem 2.5rem 0rem 0rem;
 
-        & > .fa-regular{
-            display: block;
+        & .fa-regular{
+            color: black;
+            opacity: 1;
         }
+        & .fa-solid{
+            opacity: 0;
+        }  
 
 
         & > h1{
             font-family: shrikhand;
             font-size: 28px;
         }
+    }
+}
+
+.fa-stack:hover{
+    .fa-regular{
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .fa-solid{
+        opacity: 1;
+        transition: opacity 1s
+    }
+    .fa{
+        display: block;
+        -webkit-text-fill-color: transparent;
+        background: -webkit-linear-gradient($primary-color, $secondary-color);
+        background-clip: border-box;
+        -webkit-background-clip: text;
     }
 }
 
@@ -149,48 +171,48 @@
 
 .container-1:nth-child(1){
     opacity: 0; /* test */
-    animation: fadein 3s; /* test */
+    animation: fadein 0.5s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 .container-1:nth-child(2){
     opacity: 0; /* test */
-    animation: fadein 3s 1s; /* test */
+    animation: fadein 0.5s 0.2s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 .container-1:nth-child(3){
     opacity: 0; /* test */
-    animation: fadein 3s 2s; /* test */
+    animation: fadein 0.5s 0.4s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 
 .container-2:nth-child(1){
     opacity: 0; /* test */
-    animation: fadein 3s 3s; /* test */
+    animation: fadein 0.5s 0.6s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 .container-2:nth-child(2){
     opacity: 0; /* test */
-    animation: fadein 3s 4s; /* test */
+    animation: fadein 0.5s 0.8s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 .container-2:nth-child(3){
     opacity: 0; /* test */
-    animation: fadein 3s 5s; /* test */
+    animation: fadein 0.5s 1s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 .container-3:nth-child(1){
     opacity: 0; /* test */
-    animation: fadein 3s 6s; /* test */
+    animation: fadein 0.5s 1.2s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 .container-3:nth-child(2){
     opacity: 0; /* test */
-    animation: fadein 3s 7s; /* test */
+    animation: fadein 0.5s 1.4s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 .container-3:nth-child(3){
     opacity: 0; /* test */
-    animation: fadein 3s 8s; /* test */
+    animation: fadein 0.5s 1.6s; /* test */
     animation-fill-mode: forwards; /* test */
 }
 
